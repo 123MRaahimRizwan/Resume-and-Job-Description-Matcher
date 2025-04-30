@@ -1,0 +1,58 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navBar {
+    background-color: #26666D;
+}
+
+.navLink {
+    color: white !important;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.navLink:hover {
+    color: #AEE1E1 !important;
+}
+
+/* Form Card */
+body {
+    background-color: #f8f9fa;
+}
+
+.form-card {
+    background: white;
+    border-radius: 15px;
+}
+
+.heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #26666D;
+}
+
+/* Button */
+.match_button {
+    background-color: #26666D;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.match_button:hover {
+    background-color: #3A9D9D;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 1.5rem;
+    }
+}

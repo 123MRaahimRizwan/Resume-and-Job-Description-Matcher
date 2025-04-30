@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Match Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="card shadow p-4">
+            <h1 class="text-center mb-4 text-primary">🎯 Matching Results</h1>
+
+            <div class="text-center mb-4">
+                <h2 class="text-success">Match Score: {{ match_score }}%</h2>
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-secondary">💬 Gemini Feedback</h3>
+                <div class="lead">{{ feedback | safe }}</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="text-success">✅ Matched Skills</h4>
+                    <ul class="list-group">
+                        {% for skill in matched_skills %}
+                        <li class="list-group-item">{{ skill }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <h4 class="text-danger">❌ Missing Skills</h4>
+                    <ul class="list-group">
+                        {% for skill in missing_skills %}
+                        <li class="list-group-item">{{ skill }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <!-- Graphs -->
+            <h3 class="mt-4">📊 Skill Match Charts</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{{ url_for('static', filename='pie_chart.png') }}" class="img-fluid" alt="Pie Chart">
+                </div>
+                <div class="col-md-6">
+                    <img src="{{ url_for('static', filename='bar_chart.png') }}" class="img-fluid" alt="Bar Chart">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
