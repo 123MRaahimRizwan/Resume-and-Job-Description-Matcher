@@ -51,7 +51,7 @@ A smart, AI-powered web app that evaluates how well a resume fits a job descript
 
 1. **Clone the repo**
 ```bash
-git clone https://github.com/123MRaahimRizwan/resume-matcher.git
+git clone https://github.com/123MRaahimRizwan/Resume-and-Job-Description-Matcher.git
 cd resume-matcher
 ```
 
